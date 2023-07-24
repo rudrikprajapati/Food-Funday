@@ -24,7 +24,7 @@ const Navbar = () => {
                     {
                         localStorage.getItem('user-info') ?
                             <>
-                                <li><Link to="/reservation">Reservaion</Link></li>
+                                <li><Link to="/reservation">Reservaions</Link></li>
                             </>
                             :
                             <>

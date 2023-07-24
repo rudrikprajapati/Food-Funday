@@ -29,19 +29,7 @@ export default function AdminViewBookings() {
         // console.log("p ", payload);
         setButtonDisable(true)
     }
-
-    // const postData = (props) => {
-    //     const payload = {
-    //         _id: props._id,
-    //         status_id: '6260090e43eceb38b233f189'
-    //     }
-    //     console.log("p ", payload);
-    //     // axios({
-    //     //     method: 'put',
-    //     //     url: 'http://localhost:3100/book-table/update/',
-    //     //     data: payload // you are sending body instead
-    //     // })
-    // }
+    
     return (
         <>
             <AdminNavbar />

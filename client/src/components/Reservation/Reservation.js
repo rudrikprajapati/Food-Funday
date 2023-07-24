@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useContext} from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import Navbar from "../Navbar/Navbar";
 import MyReservations from '../Reservation/MyReservations';
+import ReservationContext from './ReservationContext';
 
 export default function Reservaion() {
     const [bookingDate, setBookingDate] = useState('');
@@ -12,23 +13,29 @@ export default function Reservaion() {
     const [comments, setComments] = useState('');
     let data = JSON.parse(localStorage.getItem('user-info'));
     const navigate = useNavigate();
+    const { updateReservations } = useContext(ReservationContext);
 
-    const postData = () => {
-        const payload = {
-            booking_date: bookingDate,
-            booking_time: bookingTime,
-            approx_arrive_time: approxArriveTime,
-            no_of_persons: noOfPersons,
-            comments: comments,
-            user_id: data._id,
-            status_id: '6260090e43eceb38b233f189'
+    const postData = async () => {
+        try {
+            const payload = {
+                booking_date: bookingDate,
+                booking_time: bookingTime,
+                approx_arrive_time: approxArriveTime,
+                no_of_persons: noOfPersons,
+                comments: comments,
+                user_id: data._id,
+                status_id: '6260090e43eceb38b233f189'
+            }
+            axios({
+                method: 'post',
+                url: 'http://localhost:3100/book-table/add',
+                data: payload
+            })
+            console.log('Reservation was successful!');
+            updateReservations(); // Trigger update of MyReservations component
+        } catch(error) {
+            console.log(error)
         }
-        axios({
-            method: 'post',
-            url: 'http://localhost:3100/book-table/add',
-            data: payload
-        })
-        navigate("/")
     }
 
     return (
@@ -82,10 +89,9 @@ export default function Reservaion() {
                         </div>
                     </div>
                 </div>
+                {/* Display the user's reservations */}
+                <MyReservations userId={data._id} />
             </div>
-
-            {/* Display the user's reservations */}
-            <MyReservations userId={data._id} />
         </>
     )
 }

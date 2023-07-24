@@ -1,8 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import axios from 'axios';
+import ReservationContext from './ReservationContext';
 
 const MyReservations = ({ userId }) => {
   const [reservations, setReservations] = useState([]);
+    const { reservationsUpdated } = useContext(ReservationContext);
 
   useEffect(() => {
     // Fetch user's reservations from the backend API
@@ -16,7 +18,7 @@ const MyReservations = ({ userId }) => {
     };
 
     fetchReservations();
-  }, [userId]);
+  }, [userId, reservationsUpdated]);
 
   return (
     <>
