@@ -1,113 +1,218 @@
+// import React, { useState, useEffect } from 'react';
+// import axios from 'axios';
+// import Navbar from "../Navbar/Navbar";
+// import MyReservations from '../Reservation/MyReservations';
+
+// export default function Profile() {
+//     const [user, setUser] = useState({
+//         firstName: "",
+//         lastName: "",
+//         email: "",
+//         phoneno: "",
+//         gender: "",
+//         dob: ""
+//     });
+
+//     useEffect(() => {
+//         const fetchData = async () => {
+//             try {
+//                 const response = await axios.get(`http://localhost:3100/user/getById/${localStorage.getItem('user-info')._id}`);
+//                 setUser(response.data);
+//             } catch (error) {
+//                 console.log(error);
+//             }
+//         };
+
+//         fetchData();
+//     }, []);
+
+//     const handleInputChange = (e) => {
+//         const { name, value } = e.target;
+//         setUser((prevUser) => ({ ...prevUser, [name]: value }));
+//     };
+
+//     const handleSubmit = async () => {
+//         try {
+//             await axios.put(`http://localhost:3100/user/update/${localStorage.getItem('user-info')._id}`, user);
+//             // You can add a success notification or redirect to another page after successful update
+//         } catch (error) {
+//             console.log(error);
+//             // Handle error and show appropriate message
+//         }
+//     };
+
+//     return (
+//         <>
+//             <Navbar />
+//             <div id="reservation" className="reservations-main pad-top-100 pad-bottom-100">
+//                 <div className="container">
+//                     <div className="row">
+//                         <div className="form-reservations-box">
+//                             <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+//                                 <div className="wow fadeIn" data-wow-duration="1s" data-wow-delay="0.1s">
+//                                     <h2 className="block-title text-center">
+//                                         Profile
+//                                     </h2>
+//                                 </div>
+//                                 <div style={{ marginTop: "5%" }}>
+//                                     <div className="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+//                                         <div className="form-box">
+//                                             <input type="text" value={user.firstName} onChange={handleInputChange} name="firstName" placeholder="First Name" required />
+//                                         </div>
+//                                     </div>
+//                                     <div className="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+//                                         <div className="form-box">
+//                                             <input type="text" value={user.lastName} onChange={handleInputChange} name="lastName" placeholder="Last Name" required />
+//                                         </div>
+//                                     </div>
+//                                     <div className="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+//                                         <div className="form-box">
+//                                             <input type="email" value={user.email} onChange={handleInputChange} name="email" placeholder="Email" required />
+//                                         </div>
+//                                     </div>
+//                                     <div className="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+//                                         <div className="form-box">
+//                                             <input type="number" value={user.phoneno} onChange={handleInputChange} name="phoneno" placeholder="Phone No" required />
+//                                         </div>
+//                                     </div>
+//                                     <div className="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+//                                         <div className="form-box">
+//                                             <select name="gender" value={user.gender} onChange={handleInputChange}>
+//                                                 <option value="" disabled>Gender</option>
+//                                                 <option value="male">Male</option>
+//                                                 <option value="female">Female</option>
+//                                             </select>
+//                                         </div>
+//                                     </div>
+//                                     <div className="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+//                                         <div className="form-box">
+//                                             <input type="date" value={user.dob} onChange={handleInputChange} name="dob" required />
+//                                         </div>
+//                                     </div>
+
+//                                     <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+//                                         <div className="reserve-book-btn text-center">
+//                                             <button onClick={handleSubmit} className="hvr-underline-from-center" type="submit" value="SEND" id="submit">EDIT PROFILE</button>
+//                                         </div>
+//                                     </div>
+//                                     <MyReservations />
+//                                 </div>
+//                             </div>
+//                         </div>
+//                     </div>
+//                 </div>
+//             </div>
+//         </>
+//     );
+// }
+
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Navbar from "../Navbar/Navbar";
-import { useNavigate } from 'react-router-dom';
 
 export default function Profile() {
-    const navigate = useNavigate();
-
-    let data = JSON.parse(localStorage.getItem('user-info'));
-    // console.log("c ", data._id);
-
-    const [user, setUser] = useState([]);
-    //    setUser(data.user)
-
-    //  console.log("d ", user.user);
-
-    const [firstName, setFirstName] = useState("")
-    const [lastName, setLastName] = useState("")
-    const [email, setEmail] = useState("")
-    const [phoneno, setPhoneno] = useState("")
-    const [gender, setGender] = useState("")
-    const [dob, setDob] = useState("")
-
+    const [user, setUser] = useState({
+        firstName: "",
+        lastName: "",
+        email: "",
+        phoneno: "",
+        gender: "",
+        dob: ""
+    });
 
     useEffect(() => {
-        axios.get(`http://localhost:3100/user/getById/` + data._id)
-            .then((response) => {
-                // console.log("r ", response.data);
+        const fetchData = async () => {
+            try {
+                const response = await axios.get(`http://localhost:3100/user/getById/${localStorage.getItem('user-info')._id}`);
                 setUser(response.data);
-            })
-    }, [])
+            } catch (error) {
+                console.log(error);
+            }
+        };
 
+        fetchData();
+    }, []);
 
-    const postData = () => {
-        const payload = {
-            firstName: firstName,
-            lastName: lastName,
-            email: email,
-            phoneno: phoneno,
-            gender: gender,
-            dob: dob
+    const handleInputChange = (e) => {
+        const { name, value } = e.target;
+        setUser((prevUser) => ({ ...prevUser, [name]: value }));
+    };
+
+    const handleSubmit = async () => {
+        try {
+            // Create a separate object with only the fields to update
+            const updatedUserData = {
+                firstName: user.firstName,
+                lastName: user.lastName,
+                email: user.email,
+                phoneno: user.phoneno,
+                gender: user.gender,
+                dob: user.dob
+            };
+
+            // Send the updated user data in the request body
+            await axios.put(`http://localhost:3100/user/update/${localStorage.getItem('user-info')._id}`, updatedUserData);
+            // You can add a success notification or redirect to another page after successful update
+        } catch (error) {
+            console.log(error);
+            // Handle error and show appropriate message
         }
-        axios({
-            method: 'put',
-            url: 'http://localhost:3100/user/update/' + data._id,
-            data: user // you are sending body instead
-        })
-        // console.log("p ", payload);
-        navigate('/')
-    }
+    };
 
     return (
         <>
             <Navbar />
-            <div id="reservation" class="reservations-main pad-top-100 pad-bottom-100">
-                <div class="container">
-                    <div class="row">
-                        <div class="form-reservations-box">
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <div class="wow fadeIn" data-wow-duration="1s" data-wow-delay="0.1s">
-                                    <h2 class="block-title text-center">
+            <div id="reservation" className="reservations-main pad-top-100 pad-bottom-100">
+                <div className="container">
+                    <div className="row">
+                        <div className="form-reservations-box">
+                            <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div className="wow fadeIn" data-wow-duration="1s" data-wow-delay="0.1s">
+                                    <h2 className="block-title text-center">
                                         Profile
                                     </h2>
                                 </div>
-                                {/* <h4 class="form-title">BOOKING FORM</h4> */}
-                                {/* <p>PLEASE FILL OUT ALL REQUIRED* FIELDS. THANKS!</p> */}
-
-                                {/* <form id="contact-form" class="reservations-box"> */}
                                 <div style={{ marginTop: "5%" }}>
-                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                        <div class="form-box">
-                                            <input type="text" value={user.firstName} onChange={(e) => { setUser({ firstName: e.target.value }) }} placeholder="First Name" required="required" data-error="Booking date is required." />
+                                    <div className="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <div className="form-box">
+                                            <input type="text" value={user.firstName} onChange={handleInputChange} name="firstName" placeholder="First Name" required />
                                         </div>
                                     </div>
-                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                        <div class="form-box">
-                                            <input type="text" value={user.lastName} onChange={(e) => { setUser({ lastName: e.target.value }) }} name="dob" id="date" placeholder="Last Name" required="required" data-error="Booking time is required." />
+                                    <div className="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <div className="form-box">
+                                            <input type="text" value={user.lastName} onChange={handleInputChange} name="lastName" placeholder="Last Name" required />
                                         </div>
                                     </div>
-                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                        <div class="form-box">
-                                            <input type="email" value={user.email} onChange={(e) => setUser({ email: e.target.value })} name="dob" id="date" placeholder="Email" required="required" data-error="Approx Arrival Time is required." />
+                                    <div className="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <div className="form-box">
+                                            <input type="email" value={user.email} onChange={handleInputChange} name="email" placeholder="Email" required />
                                         </div>
                                     </div>
-                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                        <div class="form-box">
-                                            <input type="number" value={user.phoneno} onChange={(e) => setUser({ phoneno: e.target.value })} name="dob" id="date" placeholder="Phone no" required="required" data-error="No. of Person is required." />
+                                    <div className="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <div className="form-box">
+                                            <input type="number" value={user.phoneno} onChange={handleInputChange} name="phoneno" placeholder="Phone No" required />
                                         </div>
                                     </div>
-                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                        <div class="form-box">
-                                            <select name="gender" value={user.gender} id="gender" onChange={(e) => setUser({ gender: e.target.value })}>
-                                                <option selected disabled>Gender</option>
-                                                <option value="male" >Male</option>
-                                                <option value="female" >Female</option>
+                                    <div className="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <div className="form-box">
+                                            <select name="gender" value={user.gender} onChange={handleInputChange}>
+                                                <option value="" disabled>Gender</option>
+                                                <option value="male">Male</option>
+                                                <option value="female">Female</option>
                                             </select>
                                         </div>
                                     </div>
-                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                        <div class="form-box">
-                                            <input type="date" value={user.dob} onChange={(e) => setUser({ dob: e.target.value })} name="dob" id="date" placeholder="Phone no" required="required" data-error="No. of Person is required." />
+                                    <div className="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <div className="form-box">
+                                            <input type="date" value={user.dob} onChange={handleInputChange} name="dob" required />
                                         </div>
                                     </div>
 
-                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                        <div class="reserve-book-btn text-center">
-                                            <button onClick={postData} class="hvr-underline-from-center" type="submit" value="SEND" id="submit">EDIT PROFILE </button>
+                                    <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <div className="reserve-book-btn text-center">
+                                            <button onClick={handleSubmit} className="hvr-underline-from-center" type="submit" value="SEND" id="submit">EDIT PROFILE</button>
                                         </div>
                                     </div>
-                                    {/* </form> */}
                                 </div>
                             </div>
                         </div>
@@ -115,5 +220,6 @@ export default function Profile() {
                 </div>
             </div>
         </>
-    )
+    );
 }
+

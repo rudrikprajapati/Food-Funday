@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Home from './components/Home/Home';
@@ -17,6 +16,7 @@ import AdminViewFood from './components/AdminViewFood/AdminViewFood'
 import AdminLogin from './components/AdminLogin/AdminLogin'
 import AdminNavbar from './components/AdminNavbar/AdminNavbar'
 import AdminDashboard from './components/AdminDashboard/AdminDashboard';
+import MyReservations from './components/Reservation/MyReservations';
 
 function App() {
   return (
@@ -38,6 +38,7 @@ function App() {
         <Route path='/adminlogin' element={<AdminLogin />}></Route>
         <Route path='/admindashboard' element={<AdminDashboard />}></Route>
         <Route path='/adminnavbar' element={<AdminNavbar />}></Route>
+        <Route path='/my-reservations' element={<MyReservations />}></Route>
       </Routes>
     </Router>
   );

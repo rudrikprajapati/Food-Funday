@@ -4,28 +4,8 @@ const responses = require('../utils/responses')
 //bcrypt
 const bcrypt = require('bcryptjs')
 
-// exports.addUser = async (req, res) => {
-//     try {
-//         const user = new User(req.body)
-        
-//         const saveUser = await user.save()
-//         res.json(saveUser)
-//     }
-//     catch (error) {
-//         res.json({ msg: error })
-//     }
-// }
-
 exports.addUser = async (req, res) => {
     try {
-        // let validate = await validation(req.body);
-    
-        // if (validate.error) {
-        //   return responses.badRequestResponse(
-        //     res,
-        //     validate.error.details[0].message
-        //   );
-        // }
     
         const salt = await bcrypt.genSalt(10);
         const hash_password = await bcrypt.hash(req.body.password, salt);
