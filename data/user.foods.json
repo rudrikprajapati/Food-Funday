@@ -1,0 +1,336 @@
+[{
+  "_id": {
+    "$oid": "64ad7f7d9e4e13c613eafdba"
+  },
+  "food_name": "chesse-dosa",
+  "price": 200,
+  "description": "chesse 7 type",
+  "photo": "",
+  "menu_id": {
+    "$oid": "64ad7e3b9e4e13c613eafdb0"
+  },
+  "status_id": {
+    "$oid": "64ad7eeb9e4e13c613eafdb4"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64ad7f9c9e4e13c613eafdbc"
+  },
+  "food_name": "peri-peri dosa",
+  "price": 100,
+  "description": "with peri-peri masala chesse",
+  "photo": "",
+  "menu_id": {
+    "$oid": "64ad7e3b9e4e13c613eafdb0"
+  },
+  "status_id": {
+    "$oid": "64ad7eeb9e4e13c613eafdb4"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64ad7fb79e4e13c613eafdbe"
+  },
+  "food_name": "paneer dosa",
+  "price": 100,
+  "description": "with panner and cheese",
+  "photo": "",
+  "menu_id": {
+    "$oid": "64ad7e3b9e4e13c613eafdb0"
+  },
+  "status_id": {
+    "$oid": "64ad7eeb9e4e13c613eafdb4"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64ad80019e4e13c613eafdc0"
+  },
+  "food_name": "paneer pizza",
+  "price": 200,
+  "description": "with panner",
+  "photo": "",
+  "menu_id": {
+    "$oid": "64ad7e0a9e4e13c613eafda9"
+  },
+  "status_id": {
+    "$oid": "64ad7eeb9e4e13c613eafdb4"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64ad80169e4e13c613eafdc2"
+  },
+  "food_name": "cheese 7 pizza",
+  "price": 200,
+  "description": "7 type of cheese",
+  "photo": "",
+  "menu_id": {
+    "$oid": "64ad7e0a9e4e13c613eafda9"
+  },
+  "status_id": {
+    "$oid": "64ad7eeb9e4e13c613eafdb4"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64ad802c9e4e13c613eafdc4"
+  },
+  "food_name": "peri-peri pizza",
+  "price": 200,
+  "description": "peri peri cheese",
+  "photo": "",
+  "menu_id": {
+    "$oid": "64ad7e0a9e4e13c613eafda9"
+  },
+  "status_id": {
+    "$oid": "64ad7eeb9e4e13c613eafdb4"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64ad80559e4e13c613eafdc6"
+  },
+  "food_name": "green sandwich",
+  "price": 80,
+  "description": "green veg.",
+  "photo": "",
+  "menu_id": {
+    "$oid": "64ad7e1a9e4e13c613eafdab"
+  },
+  "status_id": {
+    "$oid": "64ad7eeb9e4e13c613eafdb4"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64ad80669e4e13c613eafdc8"
+  },
+  "food_name": "veg sandwich",
+  "price": 80,
+  "description": "green veg.",
+  "photo": "",
+  "menu_id": {
+    "$oid": "64ad7e1a9e4e13c613eafdab"
+  },
+  "status_id": {
+    "$oid": "64ad7eeb9e4e13c613eafdb4"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64ad807c9e4e13c613eafdca"
+  },
+  "food_name": "mayo sandwich",
+  "price": 80,
+  "description": "mayo sandwich",
+  "photo": "",
+  "menu_id": {
+    "$oid": "64ad7e1a9e4e13c613eafdab"
+  },
+  "status_id": {
+    "$oid": "64ad7eeb9e4e13c613eafdb4"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64ad808f9e4e13c613eafdcc"
+  },
+  "food_name": "butter sandwich",
+  "price": 100,
+  "description": "with butter sandwich",
+  "photo": "",
+  "menu_id": {
+    "$oid": "64ad7e1a9e4e13c613eafdab"
+  },
+  "status_id": {
+    "$oid": "64ad7eeb9e4e13c613eafdb4"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64ad80b59e4e13c613eafdce"
+  },
+  "food_name": "sprite",
+  "price": 30,
+  "description": "",
+  "photo": "",
+  "menu_id": {
+    "$oid": "64ad7c8d9e4e13c613eafda1"
+  },
+  "status_id": {
+    "$oid": "64ad7eeb9e4e13c613eafdb4"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64ad80c19e4e13c613eafdd0"
+  },
+  "food_name": "dew",
+  "price": 30,
+  "description": "",
+  "photo": "",
+  "menu_id": {
+    "$oid": "64ad7c8d9e4e13c613eafda1"
+  },
+  "status_id": {
+    "$oid": "64ad7eeb9e4e13c613eafdb4"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64ad80c99e4e13c613eafdd2"
+  },
+  "food_name": "cock",
+  "price": 30,
+  "description": "",
+  "photo": "",
+  "menu_id": {
+    "$oid": "64ad7c8d9e4e13c613eafda1"
+  },
+  "status_id": {
+    "$oid": "64ad7eeb9e4e13c613eafdb4"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64ad80d69e4e13c613eafdd4"
+  },
+  "food_name": "cold-coco",
+  "price": 30,
+  "description": "",
+  "photo": "",
+  "menu_id": {
+    "$oid": "64ad7c8d9e4e13c613eafda1"
+  },
+  "status_id": {
+    "$oid": "64ad7eeb9e4e13c613eafdb4"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64ad86299e4e13c613eafdd6"
+  },
+  "food_name": "cheese burger",
+  "price": 80,
+  "description": "with cheese",
+  "photo": "",
+  "menu_id": {
+    "$oid": "64ad7e209e4e13c613eafdad"
+  },
+  "status_id": {
+    "$oid": "64ad7eeb9e4e13c613eafdb4"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64ad86459e4e13c613eafdd8"
+  },
+  "food_name": "aloo tikki burger",
+  "price": 60,
+  "description": "with tikki",
+  "photo": "",
+  "menu_id": {
+    "$oid": "64ad7e209e4e13c613eafdad"
+  },
+  "status_id": {
+    "$oid": "64ad7eeb9e4e13c613eafdb4"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64ad86569e4e13c613eafdda"
+  },
+  "food_name": "mayo burger",
+  "price": 60,
+  "description": "with mayo",
+  "photo": "",
+  "menu_id": {
+    "$oid": "64ad7e209e4e13c613eafdad"
+  },
+  "status_id": {
+    "$oid": "64ad7eeb9e4e13c613eafdb4"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64ad86839e4e13c613eafddc"
+  },
+  "food_name": "chocolate",
+  "price": 60,
+  "description": "",
+  "photo": "",
+  "menu_id": {
+    "$oid": "64ad7e459e4e13c613eafdb2"
+  },
+  "status_id": {
+    "$oid": "64ad7eeb9e4e13c613eafdb4"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64ad86949e4e13c613eafdde"
+  },
+  "food_name": "strawberry",
+  "price": 60,
+  "description": "",
+  "photo": "",
+  "menu_id": {
+    "$oid": "64ad7e459e4e13c613eafdb2"
+  },
+  "status_id": {
+    "$oid": "64ad7eeb9e4e13c613eafdb4"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64ad86999e4e13c613eafde0"
+  },
+  "food_name": "vanila",
+  "price": 60,
+  "description": "",
+  "photo": "",
+  "menu_id": {
+    "$oid": "64ad7e459e4e13c613eafdb2"
+  },
+  "status_id": {
+    "$oid": "64ad7eeb9e4e13c613eafdb4"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64ad86a49e4e13c613eafde2"
+  },
+  "food_name": "rajbhog",
+  "price": 60,
+  "description": "",
+  "photo": "",
+  "menu_id": {
+    "$oid": "64ad7e459e4e13c613eafdb2"
+  },
+  "status_id": {
+    "$oid": "64ad7eeb9e4e13c613eafdb4"
+  },
+  "__v": 0
+}]

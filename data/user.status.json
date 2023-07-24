@@ -1,0 +1,14 @@
+[{
+  "_id": {
+    "$oid": "64ad7eeb9e4e13c613eafdb4"
+  },
+  "status_name": "available",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64ad7f009e4e13c613eafdb6"
+  },
+  "status_name": "un-available",
+  "__v": 0
+}]

@@ -1,0 +1,616 @@
+{
+	"info": {
+		"_postman_id": "fdcc5778-0167-4ba3-8a4c-9f2b49b09970",
+		"name": "test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28074314"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"rudrik@gmail.com\",\r\n    \"password\" : \"12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3100/user/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3100",
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstname\" : \"dhruv\",\r\n    \"lastname\" : \"gheewala\",\r\n    \"email\" : \"dhruv@gmail.com\",\r\n    \"password\" : \"98765\",\r\n    \"phoneno\" : \"987654321\",\r\n    \"gender\" : \"male\",\r\n    \"dob\" : \"2020-07-25T14:10:26.113+00:00\",\r\n    \"role_id\" : \"64b22d3d38514e8eba93bd4f\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3100/user/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3100",
+							"path": [
+								"user",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update user",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\" : \"98765\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3100/user/update/64b22d4e38514e8eba93bd51",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3100",
+							"path": [
+								"user",
+								"update",
+								"64b22d4e38514e8eba93bd51"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get user",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\" : \"12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3100/user/get",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3100",
+							"path": [
+								"user",
+								"get"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get userbyID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\" : \"12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3100/user/getById/64b22d4e38514e8eba93bd51",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3100",
+							"path": [
+								"user",
+								"getById",
+								"64b22d4e38514e8eba93bd51"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete user",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\" : \"12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3100/user/delete/64b22d4e38514e8eba93bd51",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3100",
+							"path": [
+								"user",
+								"delete",
+								"64b22d4e38514e8eba93bd51"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "food",
+			"item": [
+				{
+					"name": "add food",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"food_name\":\"dosa\",\r\n    \"price\":\"100\",\r\n    \"description\":\"chesse\",\r\n    \"photo\":\"abc.jpg\",\r\n    \"menu_id\":\"64a571a19d0087065b53acf2\",\r\n    \"status_id\":\"true\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3100/food/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3100",
+							"path": [
+								"food",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update food",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"price\":\"200\",\r\n    \"description\":\"chesse 7 type\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3100/food/update/64ad7f7d9e4e13c613eafdba",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3100",
+							"path": [
+								"food",
+								"update",
+								"64ad7f7d9e4e13c613eafdba"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete food",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3100/food/delete/64ad86bc9e4e13c613eafde4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3100",
+							"path": [
+								"food",
+								"delete",
+								"64ad86bc9e4e13c613eafde4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get food",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3100/food/get",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3100",
+							"path": [
+								"food",
+								"get"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get food byID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3100/food/getById/64ad7f7d9e4e13c613eafdba",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3100",
+							"path": [
+								"food",
+								"getById",
+								"64ad7f7d9e4e13c613eafdba"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "menu",
+			"item": [
+				{
+					"name": "add menu",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"menu_name\":\"drink\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3100/menu/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3100",
+							"path": [
+								"menu",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update menu",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"menu_name\":\"Beverage\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3100/menu/update/64ad7c8d9e4e13c613eafda1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3100",
+							"path": [
+								"menu",
+								"update",
+								"64ad7c8d9e4e13c613eafda1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete menu",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3100/menu/delete/64ad7d2b9e4e13c613eafda3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3100",
+							"path": [
+								"menu",
+								"delete",
+								"64ad7d2b9e4e13c613eafda3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get menu",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3100/menu/get",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3100",
+							"path": [
+								"menu",
+								"get"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get menu byId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3100/menu/getById/64ad7e0a9e4e13c613eafda9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3100",
+							"path": [
+								"menu",
+								"getById",
+								"64ad7e0a9e4e13c613eafda9"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "role",
+			"item": [
+				{
+					"name": "add role",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"role_name\" : \"admin\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3100/role/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3100",
+							"path": [
+								"role",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get role",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"role_name\" : \"admin\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3100/role/get",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3100",
+							"path": [
+								"role",
+								"get"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "order food",
+			"item": [
+				{
+					"name": "add order",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"order_id\": \"64b235f038514e8eba93bd75\",\r\n    \"food_id\" : \"64ad80169e4e13c613eafdc2\",\r\n    \"qty\" : \"4\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3100/order-food/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3100",
+							"path": [
+								"order-food",
+								"add"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "order",
+			"item": [
+				{
+					"name": "add order",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"timestamp\" : \"2020-07-25T14:10:26.113+00:00\",\r\n    \"user_id\" : \"64a3f418cbfb3dab9e52780a\",\r\n    \"comments\" : \"ASAP\",\r\n    \"status_id\" : \"64ad7eeb9e4e13c613eafdb4\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3100/order/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3100",
+							"path": [
+								"order",
+								"add"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "book tabel",
+			"item": [
+				{
+					"name": "booktable",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"booking_date\": \"2020-07-25\",\r\n    \"booking_time\": \"evening\",\r\n    \"approx_arrive_time\": \"6pm\",\r\n    \"no_of_persons\": \"4\",\r\n    \"comments\": \"ac require\",\r\n    \"user_id\": \"64a3f418cbfb3dab9e52780a\",\r\n    \"status_id\": \"64ad7eeb9e4e13c613eafdb4\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3100/book-table/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3100",
+							"path": [
+								"book-table",
+								"add"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "status",
+			"item": [
+				{
+					"name": "add status",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

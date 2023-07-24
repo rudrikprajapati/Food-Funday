@@ -1,0 +1,56 @@
+[{
+  "_id": {
+    "$oid": "64ad7c8d9e4e13c613eafda1"
+  },
+  "menu_name": "Beverage",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64ad7e0a9e4e13c613eafda9"
+  },
+  "menu_name": "pizza",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64ad7e1a9e4e13c613eafdab"
+  },
+  "menu_name": "sandwich",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64ad7e209e4e13c613eafdad"
+  },
+  "menu_name": "burger",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64ad7e3b9e4e13c613eafdb0"
+  },
+  "menu_name": "dosa",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64ad7e459e4e13c613eafdb2"
+  },
+  "menu_name": "ice-cream",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64ada8309e4e13c613eb003d"
+  },
+  "menu_name": "non-veg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64aea9f7189bd56ef7dcf8a3"
+  },
+  "menu_name": "drink",
+  "__v": 0
+}]
