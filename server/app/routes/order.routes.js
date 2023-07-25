@@ -8,5 +8,6 @@ router.get('/get', controller.getOrder)
 router.get('/getById/:orderId', controller.getOrderById)
 router.put('/update/:orderId', controller.updateOrder)
 router.delete('/delete/:orderId', controller.deleteOrder)
+router.get('/user/:userId', controller.getOrdersByUserId)
 
 module.exports = router

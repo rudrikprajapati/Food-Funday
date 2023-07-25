@@ -1,6 +1,6 @@
 import React from "react";
 import { useEffect, useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const AdminLogin = () => {
 
@@ -16,9 +16,7 @@ const AdminLogin = () => {
     }, [])
 
     async function signIn() {
-        // console.warn(email, password)
         let item = { email, password };
-        // console.log("d ", item);
         let result = await fetch("http://localhost:3100/user/login", {
             method: 'POST',
             headers: {

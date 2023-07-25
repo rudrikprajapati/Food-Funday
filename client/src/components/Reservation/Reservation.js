@@ -12,7 +12,6 @@ export default function Reservaion() {
     const [noOfPersons, setNoOfPersons] = useState('');
     const [comments, setComments] = useState('');
     let data = JSON.parse(localStorage.getItem('user-info'));
-    const navigate = useNavigate();
     const { updateReservations } = useContext(ReservationContext);
 
     const postData = async () => {

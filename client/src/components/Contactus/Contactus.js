@@ -1,6 +1,5 @@
 import React from "react";
 import Navbar from "../Navbar/Navbar";
-import Footer from '../Footer/Footer'
 
 export default class Contactus extends React.Component {
     render() {

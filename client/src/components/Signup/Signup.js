@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const Signup = () => {
     const [firstName, setFirstName] = useState("")
@@ -28,8 +28,6 @@ const Signup = () => {
                 "Accept": 'application/json'
             }
         })
-
-        result = await result.json()
         // console.warn("result", result)
         navigate("/")
     }

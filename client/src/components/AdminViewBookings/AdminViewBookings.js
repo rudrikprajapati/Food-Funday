@@ -4,7 +4,6 @@ import AdminNavbar from "../AdminNavbar/AdminNavbar";
 
 export default function AdminViewBookings() {
     const [APIData, setAPIData] = useState([]);
-    const [status, setStatus] = useState('')
     const [buttonDisable, setButtonDisable] = useState(false)
 
     useEffect(() => {
@@ -72,9 +71,6 @@ export default function AdminViewBookings() {
                                     <td>{data.no_of_persons}</td>
                                     <td>{data.comments}</td>
                                     <td><button style={{ backgroundColor: "#e75b1e", color: "#fff", border: "none" }} disabled={buttonDisable} onClick={() => postData(data._id)} type="submit">{data.status_id?.status_name}</button></td>
-                                    {/* <td>{data.status_id.map(s =>
-                                    <td>{s.status_name}</td>)
-                                }</td> */}
                                 </tr>
                             )
                         }

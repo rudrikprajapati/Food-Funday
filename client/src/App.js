@@ -17,6 +17,9 @@ import AdminLogin from './components/AdminLogin/AdminLogin'
 import AdminNavbar from './components/AdminNavbar/AdminNavbar'
 import AdminDashboard from './components/AdminDashboard/AdminDashboard';
 import MyReservations from './components/Reservation/MyReservations';
+import MyOrders from './components/MyOrder/MyOrder';
+
+let data = JSON.parse(localStorage.getItem('user-info'));
 
 function App() {
   return (
@@ -39,6 +42,8 @@ function App() {
         <Route path='/admindashboard' element={<AdminDashboard />}></Route>
         <Route path='/adminnavbar' element={<AdminNavbar />}></Route>
         <Route path='/my-reservations' element={<MyReservations />}></Route>
+        <Route path='/myorders' element={<MyOrders userId={data._id} />}></Route>
+        
       </Routes>
     </Router>
   );
